@@ -14,13 +14,13 @@ else:
     current_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
 
 # Read data from CSV files using pandas
-data_tsne_2 = pd.read_csv(os.path.join(current_dir,'..\\draft\\tsne_image_2_var.csv'), header=None).values
-data_tsne_3 = pd.read_csv(os.path.join(current_dir,'..\\draft\\tsne_image_3_var.csv'), header=None).values
+data_tsne_2 = pd.read_csv(os.path.join(current_dir,'../draft/tsne_image_2_var.csv'), header=None).values
+data_tsne_3 = pd.read_csv(os.path.join(current_dir,'../draft/tsne_image_3_var.csv'), header=None).values
 
-data_pca_2 = pd.read_csv(os.path.join(current_dir,'..\\draft\\pca_image_2_var.csv'), header=None).values
-data_pca_3 = pd.read_csv(os.path.join(current_dir,'..\\draft\\pca_image_3_var.csv'), header=None).values
+data_pca_2 = pd.read_csv(os.path.join(current_dir,'../draft/pca_image_2_var.csv'), header=None).values
+data_pca_3 = pd.read_csv(os.path.join(current_dir,'../draft/pca_image_3_var.csv'), header=None).values
 
-labels = pd.read_csv(os.path.join(current_dir,'..\\draft\\labels_visualizze.csv'), header=None).values
+labels = pd.read_csv(os.path.join(current_dir,'../draft/labels_visualizze.csv'), header=None).values
 
 def visualize_tsne_3d(data, labels):
 # Create a 3D scatter plot of the data points
@@ -69,7 +69,7 @@ def visuzalize_pca_3d(data, labels):
 
 
 # visuzalize_pca_2d(data_pca_2, labels=labels)
-# visualize_tsne_2d(data_tsne_2, labels=labels)
+visualize_tsne_2d(data_tsne_2, labels=labels)
 
 # visuzalize_pca_3d(data_pca_3, labels=labels)
-visualize_tsne_3d(data_tsne_3, labels=labels)
+# visualize_tsne_3d(data_tsne_3, labels=labels)
